@@ -1,7 +1,5 @@
 import config from '../../commons/config';
 
-
-
 export default config({
         ajax: true,
         title: '主页',

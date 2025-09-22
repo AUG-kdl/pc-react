@@ -15,6 +15,6 @@ export default config({
         });
 
         return (
-            <Button loading={loading} type="primary">12322</Button>
+            <Button loading={loading} type="primary">管理员</Button>
         );
     });

@@ -41,6 +41,16 @@ module.exports = {
                 include: path.resolve(__dirname, '../src'), // 只转译 src
             },
             {
+                test: /\.(png|jpe?g|gif|svg|webp)$/i,
+                type: 'asset',
+                parser: { dataUrlCondition: { maxSize: 8 * 1024 } } // 8 KB 以内转 base64
+            },
+            {
+                test: /\.less$/,
+                use: ['style-loader', 'css-loader', 'less-loader'],
+                include: path.resolve(__dirname, '../src'), // 只转译 src
+            },
+            {
                 test: /\.(js|jsx)$/,
                 use: {
                     loader: 'babel-loader',
